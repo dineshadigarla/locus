@@ -4,7 +4,7 @@ Regarding the problem I have called the Google Maps API
 
 > https://maps.googleapis.com/maps/api/directions/json
 
-###Response and description
+### Response and description
 From the response I have taken start, end from steps parameter and calculated but failed to correctly point the curved roads.
 ```
 {
@@ -31,7 +31,7 @@ From the response I have taken start, end from steps parameter and calculated bu
                             "travel_mode": "DRIVING"
                         }
 ```
-The overline parameter in routes has an encrypted string
+The <b>overline parameter</b> in routes has an encrypted string
 
 ```
 "overview_polyline": {
@@ -45,7 +45,8 @@ The decoded latitude longitude has covered every point including point of curvat
 
 From there I have calculated the distance using <b>Haversine Formula</b>
 
-###The Files and their description
+### Files and their description
+
 > <b>CommonUtil.java</b> is an Util file which has the calculate distance function and decode overline function <br/>
 > <b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are 50m apart
 
@@ -53,7 +54,7 @@ From there I have calculated the distance using <b>Haversine Formula</b>
 There exists some points which are the point of curvature etc.
 ```
 
-###Sample API and response
+### Sample API and response
 
 Sample API is
 ```
@@ -76,7 +77,7 @@ and Response is
 The coordinates along with the color codes mentioned in application.properties will be present in log or console. We can copy and paste in 
 >https://mobisoftinfotech.com/tools/plot-multiple-points-on-map/
 
-###The Solution For the Problem Statement Mentioned
+### Solution For the Problem Statement Mentioned
 ![MapImage2.PNG](./MapImage2.PNG)
 ![MapImage1.PNG](./MapImage1.PNG)
 
