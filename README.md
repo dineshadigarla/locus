@@ -4,6 +4,7 @@ Regarding the problem I have called the Google Maps API
 
 > https://maps.googleapis.com/maps/api/directions/json
 
+###Response and description
 From the response I have taken start, end from steps parameter and calculated but failed to correctly point the curved roads.
 ```
 {
@@ -44,24 +45,40 @@ The decoded latitude longitude has covered every point including point of curvat
 
 From there I have calculated the distance using <b>Haversine Formula</b>
 
-The Files and their description
-> <b>CommonUtil.java</b> is an Util file which has the calculate distance function and decode overline function
+###The Files and their description
+> <b>CommonUtil.java</b> is an Util file which has the calculate distance function and decode overline function <br/>
 > <b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are 50m apart
 
 ```
 There exists some points which are the point of curvature etc.
 ```
 
-Sample API
+###Sample API and response
+
+Sample API is
 ```
 http://localhost:8080/api/v1/coordinates?origin=17.72241886311235, 83.31111854603199&destination=17.726095063765282, 83.30265317672
 ```
-The Solution For the Problem Statement Mentioned
-![MapImage2.PNG](./MapImage2.PNG)
-![MapImage1.PNG](./MapImage1.PNG)
+and Response is
+```
+[
+    {
+        "latitude": 12.93166,
+        "longitude": 77.62852
+    },
+    {
+        "latitude": 12.93125,
+        "longitude": 77.62873
+    }
+]
+```
 
 The coordinates along with the color codes mentioned in application.properties will be present in log or console. We can copy and paste in 
 >https://mobisoftinfotech.com/tools/plot-multiple-points-on-map/
+
+###The Solution For the Problem Statement Mentioned
+![MapImage2.PNG](./MapImage2.PNG)
+![MapImage1.PNG](./MapImage1.PNG)
 
 
 
