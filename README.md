@@ -44,8 +44,9 @@ The decoded latitude longitude has covered every point including point of curvat
 
 From there I have calculated the distance using <b>Haversine Formula</b>
 
+The Files and their description
 > <b>CommonUtil.java</b> is an Util file which has the calculate distance function and decode overline function
-><b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are 50m apart
+> <b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are 50m apart
 
 ```
 There exists some points which are the point of curvature etc.
