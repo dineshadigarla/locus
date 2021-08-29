@@ -42,11 +42,11 @@ So I have used overline points parameter from routes and decoded the encrypted t
 
 The decoded latitude longitude has covered every point including point of curvature etc.
 
-From there I have calculated the distance using <b>Haversine Formula</b>
+I have calculated the distance using <b>Haversine Formula</b>
 
 ### Files and their description
 > <b>CommonUtil.java</b> is an Util file which has the calculate distance function and decode overline function <br/>
-> <b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are 50m apart
+> <b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are 50m apart<br/>
 > <b>MapController.java</b> is an entrypoint controller
 ```
 There exists some points which are the point of curvature etc.
@@ -74,7 +74,7 @@ The coordinates along with the color codes mentioned in application.properties w
 >https://mobisoftinfotech.com/tools/plot-multiple-points-on-map/
 
 ### The Solution For the Problem Statement Mentioned
-![MapImage2.PNG](./MapImage2.PNG)
+![MapImage2.PNG](./MapImage2.PNG)<br/>
 ![MapImage1.PNG](./MapImage1.PNG)
 
 
