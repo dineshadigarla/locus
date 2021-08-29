@@ -67,6 +67,122 @@ http://localhost:8080/api/v1/coordinates?origin=17.72241886311235,83.31111854603
     {
         "latitude": 12.93125,
         "longitude": 77.62873
+    },
+    {
+        "latitude": 12.93084,
+        "longitude": 77.62894
+    },
+    {
+        "latitude": 12.93051,
+        "longitude": 77.62905
+    },
+    {
+        "latitude": 12.93009,
+        "longitude": 77.62924
+    },
+    {
+        "latitude": 12.92991,
+        "longitude": 77.6297
+    },
+    {
+        "latitude": 12.92981,
+        "longitude": 77.63016
+    },
+    {
+        "latitude": 12.9297,
+        "longitude": 77.63061
+    },
+    {
+        "latitude": 12.9296,
+        "longitude": 77.63107
+    },
+    {
+        "latitude": 12.92951,
+        "longitude": 77.63145
+    },
+    {
+        "latitude": 12.92945,
+        "longitude": 77.63191
+    },
+    {
+        "latitude": 12.92949,
+        "longitude": 77.63224
+    },
+    {
+        "latitude": 12.92964,
+        "longitude": 77.63264
+    },
+    {
+        "latitude": 12.9298,
+        "longitude": 77.63302
+    },
+    {
+        "latitude": 12.92986,
+        "longitude": 77.63352
+    },
+    {
+        "latitude": 12.9298,
+        "longitude": 77.63367
+    },
+    {
+        "latitude": 12.92959,
+        "longitude": 77.63405
+    },
+    {
+        "latitude": 12.92941,
+        "longitude": 77.6344
+    },
+    {
+        "latitude": 12.92922,
+        "longitude": 77.63483
+    },
+    {
+        "latitude": 12.92897,
+        "longitude": 77.63531
+    },
+    {
+        "latitude": 12.92876,
+        "longitude": 77.63573
+    },
+    {
+        "latitude": 12.92855,
+        "longitude": 77.63615
+    },
+    {
+        "latitude": 12.92836,
+        "longitude": 77.63652
+    },
+    {
+        "latitude": 12.92827,
+        "longitude": 77.63671
+    },
+    {
+        "latitude": 12.92812,
+        "longitude": 77.63695
+    },
+    {
+        "latitude": 12.92795,
+        "longitude": 77.63711
+    },
+    {
+        "latitude": 12.92763,
+        "longitude": 77.63745
+    },
+    {
+        "latitude": 12.92722,
+        "longitude": 77.63718
+    },
+    {
+        "latitude": 12.92697,
+        "longitude": 77.63721
+    },
+    {
+        "latitude": 12.92671,
+        "longitude": 77.63718
+    },
+    {
+        "latitude": 12.92658,
+        "longitude": 77.63716
     }
 ]
 ```
