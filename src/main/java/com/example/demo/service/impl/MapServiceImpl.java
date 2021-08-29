@@ -65,14 +65,27 @@ public class MapServiceImpl implements IService {
             }
         }
         List<Coordinate> finalCoordinates = calculatePoints(df, overviewCoordinates);
+        List<Coordinate> finalResponse = new ArrayList<>();
+        finalResponse.add(new Coordinate(finalCoordinates.get(0).getLatitude(), finalCoordinates.get(0).getLongitude()));
+        for(int i=0;i<finalCoordinates.size()-1;i++){
+            double lat1 = finalCoordinates.get(i).getLatitude();
+            double lon1 = finalCoordinates.get(i).getLongitude();
+            double lat2 = finalCoordinates.get(i+1).getLatitude();
+            double lon2 = finalCoordinates.get(i+1).getLongitude();
+            Double d = commonUtil.calculateDistance(lat1, lon1, lat2, lon2);
+            if(Math.abs(d.intValue())<=10){
+            }else{
+                finalResponse.add(new Coordinate(lat2, lon2));
+            }
+        }
         String str = "";
         for(int k=0;k<finalCoordinates.size();k++){
-            Coordinate coordinate = finalCoordinates.get(k);
+            Coordinate coordinate = finalResponse.get(k);
             str+=coordinate.getLatitude()+","+coordinate.getLongitude()+","+color+"\n";
         }
         LOGGER.info("{}", str);
 
-        return new ResponseEntity<>(finalCoordinates, HttpStatus.OK);
+        return new ResponseEntity<>(finalResponse, HttpStatus.OK);
 
     }
 
