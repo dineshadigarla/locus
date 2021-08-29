@@ -43,10 +43,10 @@ The overline parameter in routes has an encrypted string
                 "points": "{u|mAgyxxMdFiBbBg@bBwLLoBIm@]oA_@kAMM@uAJ]h@kAb@eAl@aB~ByFb@kAPe@\\o@`@_@bAcALKLJHJf@h@p@Er@DXB"
             }
 ```
-inorder to overcome this problem, I have used overline points parameter from routes and decoded the encrypted <b>points</b> string(which is an array of points fater decoding) using decode function
-> Android Maps Util library
+Inorder to overcome this problem, I have used overline points parameter from routes and decoded the encrypted <b>points</b> string(which is an array of points after decoding) using decode function from
+> Android Maps Util library (https://github.com/googlemaps/android-maps-utils/blob/main/library/src/main/java/com/google/maps/android/PolyUtil.java)
 
-The decoded latitude longitude has covered every point including point of curvature etc.
+The decoded latitude longitude has covered points which includes point of curvature etc. From geometry only 1 line can pass thru 2 points so now we can plot points which are 50m apart from the line joining these 2 points
 
 I have calculated the distance using <b>Haversine Formula</b>
 
@@ -195,5 +195,5 @@ http://localhost:8080/api/v1/coordinates?origin=17.72241886311235,83.31111854603
 The coordinates along with the color codes mentioned in application.properties will be present in log or console. We can copy and paste in 
 >https://mobisoftinfotech.com/tools/plot-multiple-points-on-map/
 
-
+Color Code for pointing in mobisoft, google maps API url and API Key are configurable in application.properties.
 
