@@ -10,7 +10,7 @@ import java.util.Set;
 @Component
 public class CommonUtil {
 
-    public void calculateandplot(DecimalFormat df, Set<Coordinate> coordinates, Double lat1, Double lon1, Double lat2, Double lon2, int i){
+    public double calculateDistance(double lat1, double lon1, double lat2, double lon2){
         double radius = 6371e3; // metres
         double latDegrees1 = lat1 * Math.PI / 180; // φ, λ in radians
         double latDegrees2 = lat2 * Math.PI / 180;
@@ -22,7 +22,16 @@ public class CommonUtil {
                 Math.cos(latDegrees1) * Math.cos(latDegrees2) *
                         Math.sin(deltaLonDegrees / 2) * Math.sin(deltaLonDegrees / 2);
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        double d = radius * c; // in metres
+        return radius * c; // in metres
+    }
+    
+    public void calculateandplot(DecimalFormat df, Set<Coordinate> coordinates, Double lat1, Double lon1, Double lat2, Double lon2, int i){
+        double radius = 6371e3;
+        double latDegrees1 = lat1 * Math.PI / 180; // φ, λ in radians
+        double latDegrees2 = lat2 * Math.PI / 180;
+        double lonran1 = lon1 * Math.PI / 180;
+        double lonran2 = lon2 * Math.PI / 180;
+        double d = calculateDistance(lat1, lon1, lat2, lon2);
         double ad= d/ radius;
         while((50*i)<=d) {
             double f = ((50 * i) / d);
