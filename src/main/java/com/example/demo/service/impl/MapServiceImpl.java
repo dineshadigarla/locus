@@ -34,6 +34,9 @@ public class MapServiceImpl implements IService {
 
     @Value("${maps.color}")
     private String color;
+    
+    @Value("${maps.url}")
+    private String url;
 
     @Override
     public ResponseEntity<List<Coordinate>> plotResponse(String origin, String destination){
@@ -41,7 +44,6 @@ public class MapServiceImpl implements IService {
         RestTemplate restTemplate = new RestTemplate();
         Double orLat = Double.parseDouble(origin.split(",")[0]);
         Double orLon = Double.parseDouble(origin.split(",")[1]);
-        String url = "https://maps.googleapis.com/maps/api/directions/json";
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url)
                 .queryParam("origin", origin)
                 .queryParam("destination", destination)
