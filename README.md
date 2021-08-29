@@ -37,7 +37,7 @@ The overline parameter in routes has an encrypted string
                 "points": "{u|mAgyxxMdFiBbBg@bBwLLoBIm@]oA_@kAMM@uAJ]h@kAb@eAl@aB~ByFb@kAPe@\\o@`@_@bAcALKLJHJf@h@p@Er@DXB"
             }
 ```
-So I have used overline points parameter from routes and decoded the encrypted the <b>points</b> string using decode function
+inorder to overcome this problem, I have used overline points parameter from routes and decoded the encrypted <b>points</b> string(which is an array of points fater decoding) using decode function
 > Android Maps Util library
 
 The decoded latitude longitude has covered every point including point of curvature etc.
@@ -46,10 +46,10 @@ I have calculated the distance using <b>Haversine Formula</b>
 
 ### Files and their description
 > <b>CommonUtil.java</b> is an Util file which has the calculate distance function and decode overline function <br/>
-> <b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are 50m apart<br/>
+> <b>MapServiceImpl.java</b> is a service class which takes origin, destination and returns the points which are nearly 50m apart<br/>
 > <b>MapController.java</b> is an entrypoint controller
 ```
-There exists some points which are the point of curvature etc.
+There exists some extra points which are the point of curvature etc.
 ```
 
 ### Sample API
